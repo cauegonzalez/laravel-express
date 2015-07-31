@@ -1,8 +1,5 @@
-<html>
-<title>
-    Olá
-</title>
-<body>
-    Olá {{ $nome }}
-</body>
-</html>
+@extends('template')
+
+@section('content')
+    <h1>Olá {{ $nome }}</h1>
+@stop

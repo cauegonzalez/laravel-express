@@ -20,3 +20,5 @@ Route::get('test', 'TestController@index');
 Route::get('ola/{nome}', 'TestController@ola');
 
 Route::get('hello/{nome}', 'TestController@hello');
+
+Route::get('notas', 'TestController@notas');

@@ -25,4 +25,9 @@ class TestController extends Controller
     {
         return view("test.index", array('nome'=>$nome));
     }
+
+    public function notas()
+    {
+        return view("test.notas");
+    }
 }
