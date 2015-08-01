@@ -1,5 +1,9 @@
 @extends('template')
 
+@section('title')
+    Minhas anotações
+@endsection
+
 @section('content')
     <ul>
         <li>Anotação 1</li>

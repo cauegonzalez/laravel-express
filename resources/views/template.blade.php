@@ -1,6 +1,6 @@
 <html>
 <title>
-    Olá
+    @yield('title')
 </title>
 <body>
     @yield('content')
