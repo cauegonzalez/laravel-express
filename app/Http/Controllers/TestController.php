@@ -30,4 +30,14 @@ class TestController extends Controller
     {
         return view("test.notas");
     }
+
+    public function noticias()
+    {
+        $arrayNoticias = array(0=>"Notícia 1", 1=>"Notícia 2", 2=>"Notícia 3", 3=>"Notícia 4");
+
+        //abaixo, três formas de fazer a mesma coisa
+        //return view("test.noticias", array('arrayNoticias'=>$arrayNoticias));
+        //return view("test.noticias", ['arrayNoticias' => $arrayNoticias]);
+        return view("test.noticias", compact('arrayNoticias'));
+    }
 }
