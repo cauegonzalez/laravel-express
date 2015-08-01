@@ -24,3 +24,5 @@ Route::get('hello/{nome}', 'TestController@hello');
 Route::get('notas', 'TestController@notas');
 
 Route::get('noticias', 'TestController@noticias');
+
+Route::get('news', 'TestController@news');
