@@ -26,3 +26,6 @@ Route::get('notas', 'TestController@notas');
 Route::get('noticias', 'TestController@noticias');
 
 Route::get('news', 'TestController@news');
+
+
+Route::get('blog', 'PostsController@index');
