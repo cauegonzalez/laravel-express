@@ -29,3 +29,4 @@ Route::get('news', 'TestController@news');
 
 
 Route::get('blog', 'PostsController@index');
+Route::get('admin', 'PostsAdminController@index');

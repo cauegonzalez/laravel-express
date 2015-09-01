@@ -16,7 +16,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'name' => $faker->name,
         'email' => $faker->email,
         'password' => bcrypt(str_random(10)),
-        'remember_token' => str_random(10),
+        'remember_token' => str_random(10)
     ];
 });
 
@@ -25,7 +25,7 @@ $factory->define(App\Post::class, function (Faker\Generator $faker) {
         'title' => $faker->sentence,
         'content' => $faker->paragraph,
         'date' => $faker->dateTime,
-        'source' => $faker->url,
+        'source' => $faker->url
     ];
 });
 
@@ -34,6 +34,12 @@ $factory->define(App\Comment::class, function (Faker\Generator $faker) {
         'posts_id' => $post->id,
         'name' => $faker->name,
         'email' => $faker->email,
-        'comment' => $faker->paragraph,
+        'comment' => $faker->paragraph
+    ];
+});
+
+$factory->define(App\Tag::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->word
     ];
 });
