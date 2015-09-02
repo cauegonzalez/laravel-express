@@ -21,6 +21,6 @@ class PostsAdminController extends Controller
     {
         $posts = $this->post->all();
 
-        return view('admin.posts.index', compact($posts));
+        return view('admin.posts.index', compact('posts'));
     }
 }
