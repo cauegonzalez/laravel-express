@@ -1,0 +1,1 @@
+<a href="{{ route('admin.posts.index') }}" class="btn btn-default">Cancelar</a>

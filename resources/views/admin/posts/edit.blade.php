@@ -1,7 +1,7 @@
 @extends('template')
 
 @section('content')
-    <h1>Create new Post</h1>
+    <h1>Edit Post: <i>{{ $post->title }}</i></h1>
 
     @if (count($errors) > 0)
         <div class="alert alert-danger">
@@ -13,13 +13,13 @@
         </div>
     @endif
 
-    {!! Form::open(['route'=>'admin.posts.store', 'method'=>'post']) !!}
+    {!! Form::model($post, ['route'=>['admin.posts.update', $post->id], 'method'=>'put']) !!}
 
     @include('admin.posts._form')
 
     <div class="form-group">
         @include('admin.posts.btnCancel')
-        {!! Form::submit('Create Post', ['class'=>'btn btn-primary']) !!}
+        {!! Form::submit('Save', ['class'=>'btn btn-primary']) !!}
     </div>
 
     {!! Form::close() !!}
