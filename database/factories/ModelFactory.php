@@ -24,7 +24,6 @@ $factory->define(App\Post::class, function (Faker\Generator $faker) {
     return [
         'title' => $faker->sentence,
         'content' => $faker->paragraph,
-        'date' => $faker->dateTime,
         'source' => $faker->url
     ];
 });

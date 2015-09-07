@@ -16,7 +16,6 @@ class CreateTablePost extends Migration
             $table->increments('id');
             $table->string('title', 255);
             $table->text('content');
-            $table->dateTime('date');
             $table->string('source', 100);
             $table->timestamps();
         });
