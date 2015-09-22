@@ -5,7 +5,7 @@
 
     @foreach($posts as $post)
         <h2>{{ $post->title }}</h2>
-        <p><i>{{ $post->date }}</i></p>
+        <p><i>{{ $post->created_at }}</i></p>
         <p><b>TAGs: </b>
         @foreach ($post->tags as $tag)
             <i>{{ $tag->name }}</i>
