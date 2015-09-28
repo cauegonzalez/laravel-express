@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -30,7 +31,41 @@ Route::get('news', 'TestController@news');
 
 Route::get('blog', ['as'=>'blog', 'uses'=>'PostsController@index']);
 
-Route::group(['prefix'=>'admin'], function ()
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+
+// Route::get('auth', function ()
+// {
+//     if (Auth::attempt(['email'=>"cauegonzalez@gmail.com", 'password'=>12345]))
+//     {
+//         return "Login realizado com sucesso: ";
+//     }
+//     return "Falha ao tentar realizar o Login: ";
+// });
+// Route::get('auth', function ()
+// {
+//     $user = \App\User::find(1);
+
+//     Auth::login($user);
+
+//     if (Auth::check())
+//     {
+//         return "Login realizado com sucesso: ".$user->name;
+//     }
+// });
+
+// Route::get('auth/logout', function ()
+// {
+//     Auth::logout();
+
+//     if (!Auth::check())
+//     {
+//         return "Volte sempre!";
+//     }
+// });
+
+Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function ()
 {
     Route::group(['prefix'=>'posts'], function ()
     {
