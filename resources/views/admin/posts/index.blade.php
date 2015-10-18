@@ -1,4 +1,4 @@
-@extends('template')
+@extends('app')
 
 @section('content')
     <h1>Blog Admin</h1>
