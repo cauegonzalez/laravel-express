@@ -18,6 +18,11 @@
     @include('admin.posts._form')
 
     <div class="form-group">
+        {!! Form::label('tags', 'Tags', ['class'=>'control-label']) !!}
+        {!! Form::text('tags', $post->tagList, ['class'=>'form-control']) !!}
+    </div>
+
+    <div class="form-group">
         @include('admin.posts.btnCancel')
         {!! Form::submit('Save', ['class'=>'btn btn-primary']) !!}
     </div>
